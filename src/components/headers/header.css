@@ -1,0 +1,19 @@
+.header {
+    padding: 2rem 1rem 0;
+}
+ .carousel-slider-images img {
+    object-fit: contain;
+    width: 100%;
+    height: 500px;
+   
+    
+}
+.carousel-slider-images ul {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+     .carousel-slider-images img {
+    height: 200px;
+}
+}

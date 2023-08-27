@@ -1,0 +1,112 @@
+.searchedpage-container {
+  background-color: aliceblue;
+  font-family: var(--font-family);
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+
+}
+.searchedpage-header {
+  flex-direction: column;
+  display: flex;
+  width: 50%;
+
+  align-items: center;
+  
+  
+}
+.searchedpage-container_searchbox {
+  display: flex;
+  width: 100%;
+
+}
+.searchedpage-container_searchbox input {
+  flex: 1;
+  padding: 0.75rem 0rem 0.75rem 1rem;
+
+  outline: none;
+  /* border: 0; */
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  border-radius: 5px;
+  border: 0.5px solid rgb(199, 189, 189);
+ 
+}
+.subcategories_card {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.searchpage-container_subcategories {
+  margin-top: 1.5rem;
+}
+.searchpage-content {
+  display: flex;
+  gap: 1rem;
+}
+.searchedpage-container_searchbox button {
+  padding: 0.75rem 1rem;
+  margin-left: 10px;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  background-color: var(--var-highlight);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.navbar-search_bar button:hover {
+  background-color: #a68d02;
+}
+
+.subcategories_card {
+  background-color: rgb(188, 186, 186);
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.subcategories_card p {
+  font-weight: 400;
+  white-space: nowrap;
+}
+.searchedpage-product_list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-items: center;
+
+  
+ 
+}
+
+
+@media screen and (min-width: 10px) and (max-width: 480px) {
+  .searchedpage-container_searchbox {
+    width: 100%;
+  }
+  .searchedpage-header {
+    width: 100%;
+  }
+  .searchpage-container_subcategories {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .searchpage-content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* Adjust as needed */
+    padding: 10px;
+  }
+  .searchpage-container_subcategories::-webkit-scrollbar {
+    display: none;
+  }
+  .searchedpage-product_list {
+  margin-top: 2rem;
+
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+}
+}

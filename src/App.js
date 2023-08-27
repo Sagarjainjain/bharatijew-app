@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Homepage from "./pages/homepage/homepage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchedPage from "./pages/searched_page/searched_page";
+import ProductDetails from "./pages/productdetails/product_details";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/search?" element={<SearchedPage />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+// npm install redux redux-thunk react-redux

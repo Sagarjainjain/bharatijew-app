@@ -1,0 +1,127 @@
+.goldRate-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.gold-rate-title h1 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.goldrate-card {
+  background-color: white;
+  padding: 1rem 0;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.goldrate-card_header {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.goldrate-card_header h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.goldrate-card_rate-header h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+.goldrate-card_rate {
+      display: flex;
+  justify-content: space-evenly;
+    font-family: var(--font-family);
+    padding: 0 1rem;
+  margin: 1rem 0;
+}
+.goldrate-card_rate-type p {
+    padding: 0.50rem 0;
+}
+.goldrate-card_rate-type h3 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    
+}
+.goldrate-card_rate-live-rate h3 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    
+    
+}
+.goldrate-card_rate-live-rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.goldrate-card_rate-live-rate p {
+
+    padding: 0.50rem 0;
+}
+@media screen and (max-width: 480px) {
+  .gold-rate-title h1 {
+    font-size: 22px;
+  }
+  .goldrate-card {
+    background-color: white;
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .goldrate-card_header {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.goldrate-card_header h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.goldrate-card_rate-header h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+.goldrate-card_rate {
+      display: flex;
+  justify-content: space-between;
+    font-family: var(--font-family);
+    padding: 0 1rem;
+  margin: 1rem 0;
+}
+.goldrate-card_rate-type p {
+    padding: 0.50rem 0;
+}
+.goldrate-card_rate-type h3 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    
+}
+.goldrate-card_rate-live-rate h3 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    
+    
+}
+.goldrate-card_rate-live-rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.goldrate-card_rate-live-rate p {
+
+    padding: 0.50rem 0;
+}
+}

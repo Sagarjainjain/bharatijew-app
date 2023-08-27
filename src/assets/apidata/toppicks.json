@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1501845813,
+        "jewellery_name": "Earings",
+        "image": "https://www.tanishq.co.in/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwd25db0db/images/hi-res/504025HMTAAA00.jpg",
+        "weight": 15.10
+    },
+    {
+        "id": 1501854815,
+        "jewellery_name": "Earings",
+        "image": "https://images-static.nykaa.com/media/catalog/product/1/c/1c6ad6e8905217009735_02S_1.jpg?tr=w-500,pr-true",
+        "weight": 19.62
+    },
+    {
+        "id": 1501854481,
+        "jewellery_name": "Earings",
+        "image": "https://5.imimg.com/data5/ECOM/Default/2023/6/316375077/EL/KV/LE/56919428/image-9181c404-6117-4540-b8ee-500d78899959-500x500.jpg",
+        "weight": 20.87
+    },
+    {
+        "id": 15018451515,
+        "jewellery_name": "Earings",
+        "image": "https://everstylish.com/pub/media/catalog/product/cache/689aad3dff30df62a7b33021fe130799/j/e/jew220885-12_copy.jpg",
+        "weight": 22.78
+    }
+
+]
