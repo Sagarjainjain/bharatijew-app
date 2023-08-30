@@ -18,12 +18,12 @@ const AboutUs = () => {
           <p>
             Welcome to Bharati Jewellers Dharavi , a premier destination for
             exquisite gold jewelry that has been a cornerstone of elegance and
-            craftsmanship since [Year of Establishment]. For the past 25 years,
+            craftsmanship since 2000. For the past 20+ years,
             we have been curating and offering an unparalleled selection of gold
             jewelry pieces that reflect the essence of beauty, tradition, and
             innovation.
           </p>
-          <div className="article_profiles">
+          {/* <div className="article_profiles">
             <div className="article_profile-1">
               <div className="article_profile_media">
                 <img
@@ -48,7 +48,7 @@ const AboutUs = () => {
                 <p>Owner</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </article>
       </div>
     </div>

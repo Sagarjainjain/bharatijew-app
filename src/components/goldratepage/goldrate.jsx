@@ -1,15 +1,17 @@
 import React, {useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {getlivegoldrate} from "../../actions/liverate"
+import {getlivegoldrate, getlivesilverrate} from "../../actions/liverate"
 import "./goldrate.css";
 
 const GoldRate = () => {
     const goldrate = useSelector((state) => state.goldrate);
+    const silverrate = useSelector((state) => state.silverrate);
     const dispatch = useDispatch();
 
-
+    console.log(silverrate)
       useEffect(() => {
         dispatch(getlivegoldrate());
+        dispatch(getlivesilverrate());
       }, [dispatch]);
   return (
     <div className="goldRate-container flex__center section__padding">
@@ -31,6 +33,10 @@ const GoldRate = () => {
             <p>{goldrate.map((item) => item["goldRateofseven"])}/10gm</p>
             <p>{goldrate.map((item) => item["goldRateofnine"])}/10gm</p>
           </div>
+        </div>
+        <div className="silverrate-card_rate">
+          <h3>Silver Rate</h3>
+          <p>{silverrate.map((item) => item.silverRate)}/10 gram</p>
         </div>
       </div>
     </div>
