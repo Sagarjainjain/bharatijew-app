@@ -1,50 +1,63 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo} from "react";
 import "./searched.css";
 import CategoryCard from "../../widgets/category_card/category_card";
 import { useSelector, useDispatch } from "react-redux";
 import { getSubCategory } from "../../actions/subcategory";
-import {getProductsBySearch} from "../../actions/products";
+import { getProductsBySearch } from "../../actions/products";
+import ClipLoader from "react-spinners/ClipLoader";
 import { useNavigate, useSearchParams } from "react-router-dom";
-
-
 
 const SearchedPage = () => {
   const subcategory = useSelector((state) => state.subcategory);
   const products = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const [searchparams] = useSearchParams();
-  const category = searchparams.get('category')
-  const navigate = useNavigate()
+  const category = searchparams.get("category");
+  const navigate = useNavigate();
+  // const [isLoading, setIsLoading] = useState(true);
 
-  const subcategorydata = searchparams.get('subcategory')
+  const subcategorydata = searchparams.get("subcategory");
 
   const searchData = useMemo(() => {
-    const search = {category, subcategorydata}
-    return search
-  }, [category, subcategorydata])
+    const search = { category, subcategorydata };
+    return search;
+  }, [category, subcategorydata]);
+
   useEffect(() => {
     dispatch(getSubCategory());
-    dispatch(getProductsBySearch(searchData))
+    dispatch(getProductsBySearch(searchData));
+    // setIsLoading(false);
   }, [dispatch, searchData]);
-  
+
   const handleClick = (subcategory_name) => {
-    new URLSearchParams(`?category=${category}&subcategory=${subcategory_name}`);
-    navigate(`/search?category=${category}&subcategory=${subcategory_name}`)
-    window.location.reload()
-  }
+    new URLSearchParams(
+      `?category=${category}&subcategory=${subcategory_name}`
+    );
+    navigate(`/search?category=${category}&subcategory=${subcategory_name}`);
+    window.location.reload();
+  };
+
   return (
     <>
       <div className="searchedpage-container flex__center  section__padding">
         <div className="searchedpage-header ">
           <div className="searchedpage-container_searchbox">
-            <input type="text" placeholder="Search for a product" defaultValue={category} />
+            <input
+              type="text"
+              placeholder="Search for a product"
+              defaultValue={category}
+            />
             <button type="button">Search</button>
           </div>
 
           <div className="searchpage-container_subcategories">
             <div className="searchpage-content">
               {subcategory.map((item) => (
-                <div onClick={() => handleClick(item.subcategory_name)} key={item._id} className="subcategories_card">
+                <div
+                  onClick={() => handleClick(item.subcategory_name)}
+                  key={item._id}
+                  className="subcategories_card"
+                >
                   <p>{item.subcategory_name}</p>
                 </div>
               ))}
@@ -52,9 +65,15 @@ const SearchedPage = () => {
           </div>
         </div>
       </div>
-      <div className="searchedpage-product_list section__padding flex__center">
-        <CategoryCard products={products} />
-      </div>
+      {products && products.length === 0 ? (
+        <div className="loader__container flex__center section__padding ">
+          <ClipLoader />
+        </div>
+      ) : (
+        <div className="searchedpage-product_list section__padding flex__center">
+          <CategoryCard products={products} />
+        </div>
+      )}
     </>
   );
 };

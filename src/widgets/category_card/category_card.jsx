@@ -1,17 +1,21 @@
 import React from "react";
 import "./category_card.css";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
-const CategoryCard = ({products}) => {
-  const navigate = useNavigate()
+const CategoryCard = ({ products }) => {
+  const navigate = useNavigate();
   const handleClick = (id) => {
-    navigate(`/product/${id}`)
-  }
-  
+    navigate(`/product/${id}`);
+  };
+
   return (
     <>
       {products.map((item) => (
-        <div onClick={() => handleClick(item._id)} key={item._id} className="categorycard">
+        <div
+          onClick={() => handleClick(item._id)}
+          key={item._id}
+          className="categorycard"
+        >
           <div className="categorycard-media">
             <img src={item.image} alt="" />
             <div className="categorycard-weight">
@@ -30,6 +34,7 @@ const CategoryCard = ({products}) => {
           </div>
         </div>
       ))}
+      
     </>
   );
 };

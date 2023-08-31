@@ -8,7 +8,6 @@ const GoldRate = () => {
     const silverrate = useSelector((state) => state.silverrate);
     const dispatch = useDispatch();
 
-    console.log(silverrate)
       useEffect(() => {
         dispatch(getlivegoldrate());
         dispatch(getlivesilverrate());
@@ -30,13 +29,13 @@ const GoldRate = () => {
           </div>
           <div className="goldrate-card_rate-live-rate">
             <h3>Live Gold Rate</h3>
-            <p>{goldrate.map((item) => item["goldRateofseven"])}/10gm</p>
-            <p>{goldrate.map((item) => item["goldRateofnine"])}/10gm</p>
+            <p>{goldrate && goldrate.length === 0 ? "updating..." : goldrate.map((item) => item["goldRateofseven"])}/10gm</p>
+            <p>{goldrate && goldrate.length === 0 ? "updating..." : goldrate.map((item) => item["goldRateofnine"])}/10gm</p>
           </div>
         </div>
         <div className="silverrate-card_rate">
           <h3>Silver Rate</h3>
-          <p>{silverrate.map((item) => item.silverRate)}/10 gram</p>
+          <p>{ silverrate && silverrate.length === 0 ? "updating..." : silverrate.map((item) => item.silverRate)}/10 gram</p>
         </div>
       </div>
     </div>
