@@ -6,6 +6,13 @@
 .footer_container-title {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font-family);
+}
+.footer_container-title a {
+    text-decoration: none;
+    color: skyblue;
 }
 .footer_container-title h1 {
     font-family: var(--font-family);
